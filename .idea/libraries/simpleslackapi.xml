@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="simpleslackapi">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../depends/simpleslackapi.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
