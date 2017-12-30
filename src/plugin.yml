@@ -1,0 +1,5 @@
+name: SlackAuth
+main: me.sergivb01.slackauth.Auth
+version: 1.0
+author: sergivb01
+website: sergivb01.me

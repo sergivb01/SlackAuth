@@ -1,0 +1,63 @@
+############################################################################
+#
+#                         Slack 2FA Auth
+#
+#   If you require assistance, please contact @sergivb01 on MCM
+#
+#      * Discord: sergiiiii#1749 // https://discord.gg/rgvhHTX
+#      * MCM: http://www.mc-market.org/members/73306/
+#      * Mail: me@sergivb01.me
+#
+############################################################################
+
+#Once you start your server, this will be set to your machine HWID. Please send me this value
+#though MCM in order to whitelist you. Contact me if you have any issues with this.
+hwid: ""
+
+#Type in here number of the server (1 = 1st Lobby // 2 = 2nd Lobby)
+server-num: 1
+
+#Create a bot at https://my.slack.com/services/new/bot and paste token here.
+slack:
+  enabled: true
+  bot-token: "bot-token"
+  channel: "auth"
+
+#Create a Discord APP in Discord Developer website. Then you will need to create a bot user and get the secret
+#token and place it down here. Make sure to install the app in your desired Discord Server.
+discord:
+  enabled: true
+  bot-token: "bot-token"
+  channel: "auth"
+
+#Your redis server details.
+redis:
+  host: "localhost"
+  port: 6379
+  timeout: 2000
+  auth: false #Set this to true if you are using a password
+  password: ""
+
+connection:
+  proxy: false
+  url: ""
+  port: 8080
+
+#Supports color codes (in-game) and message formatting (slack, like *message* for bold or `code` for code).
+messages:
+  authed: "&aYou are now authenticated."
+  need-auth: "&cYou must authenticate your account!"
+  bot:
+    connected-message: "Hey! I am now connected and reading your messages."
+    disconnected-message: "Bye!"
+    code-set: "Code for %player% is: %pin%"
+    code-removed: "Code for %player% has been removed!"
+    code-exists: "A code for you already exists! Please run \"delcode %player%\""
+    player-authed: "%player% has been authenticated"
+    player-banned: "Ok, I have just banned %player%"
+    player-unbanned: "Ok, I have just unbanned %player%"
+
+#These commands must be executable by console.
+commands:
+  ban: "ban %player% -s Security Reasons"
+  unban: "pardon %player% -s"

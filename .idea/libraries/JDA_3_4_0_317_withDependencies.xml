@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="JDA-3.4.0_317-withDependencies">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../depends/JDA-3.4.0_317-withDependencies.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
