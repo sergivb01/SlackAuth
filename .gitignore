@@ -76,3 +76,13 @@ hs_err_pid*
 .gitignore
 .idea/inspectionProfiles/
 SlackAuth.iml
+.idea/artifacts/
+.idea/bashsupport_project.xml
+.idea/compiler.xml
+.idea/google-java-format.xml
+.idea/misc.xml
+src/src/
+.idea/*
+.idea/**
+.idea/modules.xml
+.idea/vcs.xml
