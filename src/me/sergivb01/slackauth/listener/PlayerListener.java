@@ -25,8 +25,12 @@ public class PlayerListener implements Listener{
     public void onAsyncChat(AsyncPlayerChatEvent event){
         Player player = event.getPlayer();
         if(player.hasPermission("auth.require")){
+            if(playerIsAuthed(player)){
+                return;
+            }
             if(event.getMessage().equals(getPlayerCode(player.getName()))){
                 setAuthed(player);
+                removeCode(player.getName());
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', instance.getConfig().getString("messages.authed")));
                 event.setCancelled(true);
             }else{

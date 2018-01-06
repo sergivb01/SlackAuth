@@ -26,9 +26,9 @@ public class SlackBot {
 
     private void init(String token, boolean proxy, String proxyURL, int proxyPort) {
         if(proxy){ //Using proxy?
-            session = SlackSessionFactory.getSlackSessionBuilder(token).withProxy(Proxy.Type.SOCKS, proxyURL, proxyPort).build();
+            session = SlackSessionFactory.getSlackSessionBuilder(token).withAutoreconnectOnDisconnection(true).withProxy(Proxy.Type.SOCKS, proxyURL, proxyPort).build();
         }else {
-            session = SlackSessionFactory.getSlackSessionBuilder(token).build();
+            session = SlackSessionFactory.getSlackSessionBuilder(token).withAutoreconnectOnDisconnection(true).build();
         }
 
         try {
